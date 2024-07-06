@@ -1,12 +1,46 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff8dcb;
+  --main-background-color: #fff1f7;
+  --main-heading-text-color: #ffc2e6;
+  --main-text-color: #353430;
+  --main-paragraph-color: #353430;
+  --header-text-color-nav: #353430;
+  --main-font: 'IBM Plex Mono', monospace;
+  --main-text-size: 18px;
+  --main-gap: 10px;
+  --main-line-height: 18px;
+  --main-font-weight: 400;
+  --heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-bg: url(../images/cover-image-light.png);
+  --display: none;
+}
+
+@media (prefers-color-scheme: light) {
+ :root {
+  --accent-color: #ff8dcb;
+  --main-background-color: #fff1f7;
+  --main-heading-text-color: #ffc2e6;
+  --main-text-color: #353430;
+  --main-paragraph-color: #353430;
+  --header-text-color-nav: #353430;
+  --main-font: 'IBM Plex Mono', monospace;
+  --main-text-size: 18px;
+  --main-gap: 10px;
+  --main-line-height: 18px;
+  --main-font-weight: 400;
+  --heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-bg: url(../images/cover-image-light.png);
+  --display: none;
+ }
+}
+
+@media screen and (width >= 768px) {
+
+  :root {
+    --heading-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+
+  .page.theme_light {
+    --heading-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
 }
